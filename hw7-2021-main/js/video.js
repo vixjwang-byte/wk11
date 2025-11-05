@@ -38,11 +38,15 @@ document.querySelector("#skip").addEventListener("click", function(){
 });
 
 document.querySelector("#mute").addEventListener("click", function(){
+	let button = document.querySelector("#mute");
 	if (video.muted == false){
+		button.innerHTML = "Unmute";
 		video.muted = true;
+
 		console.log("Muted");
 	} else {
 		video.muted = false;
+		button.innerHTML = "Mute";
 		console.log("Unmuted");
 	}
 });
